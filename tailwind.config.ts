@@ -8,11 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      width: {
+        nav: "480px",
+      },
       spacing: {
         xs: "5px",
         sm: "10px",
         md: "20px",
         lg: "40px",
+        nav: "480px",
       },
       colors: {
         main: "#F6F6F6",
@@ -20,6 +24,7 @@ const config: Config = {
         gold: "#E8D5C6",
         line: "#6E6E6E",
         "light-line": "#D9D9D9",
+        faded: "#3B3B3B",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
