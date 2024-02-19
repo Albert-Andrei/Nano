@@ -16,7 +16,7 @@ export const NavBar: FC = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-10 max-w-screen-2xl flex flex-row items-center justify-between mt-lg px-20 ${invertNavbar && "invert"}`}
+        className={`fixed top-0 z-10 w-screen max-w-screen-2xl flex flex-row items-center justify-between mt-lg px-20 ${invertNavbar && "invert"}`}
       >
         <Link href="/">
           <div className={`flex ${invertLogo && "invert"}`}>

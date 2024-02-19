@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${PoppinsFont.className} bg-background`}>
+      <body className={`${PoppinsFont.className} bg-background flex flex-col items-center`}>
         <NavBar />
         {children}
       </body>
