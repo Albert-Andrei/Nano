@@ -1,4 +1,5 @@
 "use client";
+
 import { FC, useState } from "react";
 import Image from "next/image";
 import navigationItems from "@data/navigation.json";
@@ -53,16 +54,16 @@ export const SideBar: FC<SideBarProps> = ({ isOpen, setIsOpen }) => {
         <nav className="px-20">
           <ul className="flex flex-col">
             {navigationItems.map((item, index) => {
-              const isOnPage = getIsOnPage(item.label as string, index);
+              const isOnPage = getIsOnPage(item.label, index);
 
               return (
                 <li
                   key={item.id}
-                  onMouseOver={() => setHovered(true)}
+                  onMouseEnter={() => setHovered(true)}
                   onMouseLeave={() => setHovered(false)}
-                  onFocus={() => {}}
+                  // onFocus={() => {}}
                 >
-                  <Link href={item.href as string} onClick={() => setIsOpen(false)}>
+                  <Link href={item.href} onClick={() => setIsOpen(false)}>
                     <p
                       className={`text-5xl font-medium ${isOnPage && !hovered ? "text-white" : "text-faded"} hover:text-white transition-colors uppercase py-4`}
                     >
