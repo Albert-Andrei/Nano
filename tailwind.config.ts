@@ -25,6 +25,7 @@ const config: Config = {
         line: "#6E6E6E",
         "light-line": "#D9D9D9",
         faded: "#3B3B3B",
+        text: "#BDBDBD",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
