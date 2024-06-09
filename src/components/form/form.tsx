@@ -73,8 +73,12 @@ export const ContactForm: FC = () => {
   };
 
   return (
-    <form ref={form} onSubmit={handleSubmit} className="max-w-[560px] pb-[120px]">
-      <p className="font-bold text-[42px] leading-[50px]">
+    <form
+      ref={form}
+      onSubmit={handleSubmit}
+      className="max-w-[560px] max-md:max-w-[100%] pb-[120px]"
+    >
+      <p className="font-bold text-[2.625rem] max-sm:text-[2rem] leading-[50px] max-sm:leading-[40px]">
         BREATHE LIFE
         <br />
         INTO YOUR IDEAS
@@ -123,7 +127,7 @@ export const ContactForm: FC = () => {
         make a reality?
       </p>
 
-      <div className="flex mt-lg gap-[50px]">
+      <div className="flex max-sm:flex-col mt-lg gap-[50px] max-sm:gap-[40px]">
         <input
           required
           id="name"

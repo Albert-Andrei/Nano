@@ -4,19 +4,19 @@ import ContactForm from "@components/form";
 
 export default function Contact() {
   return (
-    <main className="w-full relative flex flex-row justify-end bg-main">
+    <main className="w-full relative flex flex-row max-lg:flex-col justify-end bg-main">
       {/* image */}
-      <div className="fixed w-[50%] h-screen top-0 left-0 self-start">
+      <div className="fixed max-lg:relative w-[50%] max-xl:w-[45%] max-lg:w-[100%] h-screen max-lg:h-[360px] top-0 left-0 self-start">
         <Image
           src="/images/thinker.webp"
           alt="side image"
           width={3240}
           height={4050}
           priority
-          className="object-cover h-full"
+          className="object-cover h-full max-lg:object-top"
         />
 
-        <div className="absolute left-[80px] bottom-lg">
+        <div className="absolute left-[80px] bottom-lg max-lg:hidden">
           <p className="font-medium text-[64px] leading-[96px] text-white">Let&#39;s collaborate</p>
 
           <div className="flex mt-sm ">
@@ -28,7 +28,7 @@ export default function Contact() {
       </div>
 
       {/* Content */}
-      <div className="w-[50%] bg-main pt-[240px] pl-[60px]">
+      <div className="w-[50%] max-xl:w-[55%] max-lg:w-[100%] bg-main pt-[240px] max-lg:pt-[80px] pl-[60px] max-lg:px-[60px] max-sm:px-[16px]">
         <ContactForm />
       </div>
     </main>
