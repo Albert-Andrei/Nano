@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <main className="w-full relative flex flex-row max-lg:flex-col justify-end bg-main">
       {/* image */}
-      <div className="fixed max-lg:relative w-[50%] max-xl:w-[45%] max-lg:w-[100%] h-screen max-lg:h-[360px] top-0 left-0 self-start">
+      <section className="dark-bg fixed max-lg:relative w-[50%] max-xl:w-[45%] max-lg:w-[100%] h-screen max-lg:h-[360px] top-0 left-0 self-start">
         <Image
           src="/images/thinker.webp"
           alt="side image"
@@ -25,12 +25,12 @@ export default function Contact() {
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Content */}
-      <div className="w-[50%] max-xl:w-[55%] max-lg:w-[100%] bg-main pt-[240px] max-lg:pt-[80px] pl-[60px] max-lg:px-[60px] max-sm:px-[16px]">
+      <section className="light-bg w-[50%] max-xl:w-[55%] max-lg:w-[100%] bg-main pt-[240px] max-lg:pt-[80px] px-[60px] max-lg:px-[60px] max-sm:px-[16px]">
         <ContactForm />
-      </div>
+      </section>
     </main>
   );
 }
