@@ -6,8 +6,8 @@
   },
   {
     "id": 2,
-    "label": "Services",
-    "href": "/services"
+    "label": "About",
+    "href": "/about"
   },
   {
     "id": 3,
@@ -16,12 +16,12 @@
   },
   {
     "id": 4,
-    "label": "About",
-    "href": "/about"
+    "label": "Contact",
+    "href": "/contact"
   },
   {
     "id": 5,
-    "label": "Contact",
-    "href": "/contact"
+    "label": "Discount",
+    "href": "/discount"
   }
 ]

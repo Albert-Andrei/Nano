@@ -31,7 +31,7 @@ const AccordionTrigger = React.forwardRef<
       {children}
 
       <Image
-        src="/svg/arrow-down.svg"
+        src="/svg/general/arrow-down.svg"
         alt="arrow-down"
         width={42}
         height={42}

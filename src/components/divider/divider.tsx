@@ -5,5 +5,5 @@ interface DividerProps {
 }
 
 export const Divider: FC<DividerProps> = ({ style }) => {
-  return <div className={`${style} w-full h-px bg-light-line my-[40px]`} />;
+  return <div className={`${style} w-full h-px bg-light-line my-lg`} />;
 };
