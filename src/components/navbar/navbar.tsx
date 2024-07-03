@@ -9,11 +9,12 @@ import { usePathname } from "next/navigation";
 export const NavBar: FC = () => {
   const pathname = usePathname();
 
-  const mql = window.matchMedia("(max-width: 768px)");
+  // const mql = window.matchMedia("(max-width: 768px)");
 
   const invertNavbar = pathname === "/";
   const invertLogo = pathname === "/contact";
-  const invertBurger = pathname === "/contact" && mql.matches;
+  // const invertBurger = pathname === "/contact" && mql.matches;
+  const invertBurger = pathname === "/contact";
 
   const [isOpen, setIsOpen] = useState(false);
 

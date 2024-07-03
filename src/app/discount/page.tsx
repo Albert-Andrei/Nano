@@ -15,9 +15,9 @@ import Footer from "@components/footer";
 export default function Discount() {
   return (
     <>
-      <main className="w-full bg-main px-[180px]">
+      <main className="w-full bg-main px-[180px] max-xl:px-[60px] max-md:px-[16px]">
         {/* Header */}
-        <section className="mt-[280px]">
+        <section className="mt-[280px] max-md:mt-[240px]">
           {/* Tag */}
           <div className="bg-tag rounded-full w-[fit-content]">
             <p className="uppercase text-sm px-md py-1.5">new</p>
@@ -32,13 +32,13 @@ export default function Discount() {
             </p>
 
             {/* Socials */}
-            <div className="flex gap-2 items-center justify-center">
+            <div className="flex gap-2 items-center justify-center max-md:hidden">
               {socials.map((social) => (
                 <Link
                   href={social.link}
                   target="_blank"
                   key={social.id}
-                  className="flex  items-center justify-center w-[24px] h-[24px]"
+                  className="flex items-center justify-center w-[24px] h-[24px]"
                 >
                   <Image
                     src={social.icon}
@@ -65,9 +65,9 @@ export default function Discount() {
         />
 
         {/* Content */}
-        <section className="mt-[120px] flex mb-[240px]">
+        <section className="mt-[120px] max-md:mt-[80px] flex mb-[240px] max-md:flex-col">
           {/* Info */}
-          <div className="w-[50%] pr-[130px]">
+          <div className="w-[50%] max-md:w-[100%] pr-[130px] max-md:pr-[0px]">
             <p className="font-semibold text-2xl max-sm:text-xl">Get discount</p>
 
             <p className="text-base text-text font-light mt-6">
@@ -82,15 +82,16 @@ export default function Discount() {
           </div>
 
           {/* Accordion */}
-          <div className="w-[50%]">
+          <div className="w-[50%] max-md:w-[100%] max-md:mt-[80px]">
             {discounts.map((discount, index) => (
               <Accordion
                 key={"discount" + discount.id}
                 type="single"
                 collapsible
+                defaultValue="item-1"
                 className={index > 0 ? "mt-[30px]" : ""}
               >
-                <AccordionItem value="item-1">
+                <AccordionItem value={`item-${index}`}>
                   <AccordionTrigger className="font-semibold text-2xl max-sm:text-xl">
                     {discount.label}
                   </AccordionTrigger>
