@@ -61,7 +61,7 @@ export default function Discount() {
           width={3720}
           height={2328}
           priority
-          className="object-cover"
+          className="object-cover rounded-[30px]"
         />
 
         {/* Content */}
