@@ -69,7 +69,14 @@ export const NavBar: FC = () => {
         <Link href="/">
           <div className={`logo flex ${invertLogo && "invert"}`}>
             <Image src="/svg/logo.svg" alt="logo" width={32} height={32} />
-            <Image src="/svg/nano.svg" alt="nano" width={59} height={19} className="ml-1" />
+            <Image
+              src="/svg/nano.svg"
+              alt="nano"
+              priority
+              width={59}
+              height={19}
+              className="ml-1"
+            />
           </div>
           <span className="sr-only">logo</span>
         </Link>
@@ -79,7 +86,13 @@ export const NavBar: FC = () => {
             <p className="text-black underline underline-offset-8">Submit you&#39;r project</p>
           </Link>
 
-          <button aria-label="Burger menu" onClick={() => setIsOpen(true)}>
+          <button
+            aria-label="Burger menu"
+            onClick={() => setIsOpen(true)}
+            style={{
+              WebkitTapHighlightColor: "transparent",
+            }}
+          >
             <Image id="burger" src="/svg/general/menu.svg" alt="Menu" width={32} height={32} />
             <span className="sr-only">Open Menu</span>
           </button>

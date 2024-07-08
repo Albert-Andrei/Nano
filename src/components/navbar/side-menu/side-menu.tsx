@@ -39,10 +39,21 @@ export const SideBar: FC<SideBarProps> = ({ isOpen, setIsOpen }) => {
 
   return (
     <>
+      <button
+        className={`z-50 absolute top-10 left-20 max-xl:left-[60px] max-md:left-[16px] transition-all delay-250 duration-500 ${isOpen ? "opacity-100" : "opacity-0"}`}
+        onClick={onLogoPressed}
+      >
+        <div className="logo flex invert">
+          <Image src="/svg/logo.svg" alt="logo" width={32} height={32} />
+          <Image src="/svg/nano.svg" alt="nano" width={59} height={19} className="ml-1" />
+        </div>
+        <span className="sr-only">logo</span>
+      </button>
+
       {/* Menu */}
       <div
         id="drawer-navigation"
-        className="fixed top-0 right-0 z-40 w-[50%] max-sm:w-full h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-black ease-out duration-500 flex items-center justify-center"
+        className="fixed top-0 right-0 z-40 w-[50%] max-sm:w-full h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-black ease-out duration-500 flex items-center justify-center max-md:justify-start"
         tabIndex={-1}
         aria-labelledby="drawer-navigation-label"
         style={{ transform: isOpen ? "translateX(0)" : "" }}
@@ -52,12 +63,15 @@ export const SideBar: FC<SideBarProps> = ({ isOpen, setIsOpen }) => {
           aria-label="Burger menu"
           onClick={() => setIsOpen(false)}
           className="absolute top-10 right-20 max-xl:right-[60px] max-md:right-[16px] h-[32px] w-[32px] flex items-center justify-center"
+          style={{
+            WebkitTapHighlightColor: "transparent",
+          }}
         >
           <Image src="/svg/general/cross.svg" alt="cross" width={24} height={24} />
           <span className="sr-only">Close Menu</span>
         </button>
 
-        <div className="px-20">
+        <div className="px-20 max-md:px-[16px]">
           <p className="text-faded text-base font-medium pb-4">Menu</p>
 
           {/* Navigation  */}
@@ -106,17 +120,6 @@ export const SideBar: FC<SideBarProps> = ({ isOpen, setIsOpen }) => {
         aria-labelledby="drawer-navigation-label"
         style={{ transform: isOpen ? "translateX(0)" : "" }}
       >
-        <button
-          className={`absolute top-10 left-20 max-xl:left-[60px] max-md:left-[16px] transition-all delay-250 duration-500 ${isOpen ? "opacity-100" : "opacity-0"}`}
-          onClick={onLogoPressed}
-        >
-          <div className="logo flex invert">
-            <Image src="/svg/logo.svg" alt="logo" width={32} height={32} />
-            <Image src="/svg/nano.svg" alt="nano" width={59} height={19} className="ml-1" />
-          </div>
-          <span className="sr-only">logo</span>
-        </button>
-
         <div
           className={`h-full max-lg:h-[70%] w-[45%] max-lg:w-[50%] rounded-[60px] bg-gradient-brown absolute top-[160px] transition-all delay-200 duration-500 ${isOpen ? "-rotate-[5deg] right-[37%] max-lg:right-[35%]" : "-rotate-[0deg] right-[30%]"}`}
         />
