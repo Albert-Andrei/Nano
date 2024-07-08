@@ -16,7 +16,6 @@ const config: Config = {
         sm: "10px",
         md: "20px",
         lg: "40px",
-        nav: "480px",
       },
       colors: {
         main: "#F6F6F6",
@@ -31,6 +30,7 @@ const config: Config = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-brown": "linear-gradient(145deg, rgba(132,68,20,1) 0%, rgba(187,109,45,1) 100%)",
       },
       keyframes: {
         "accordion-down": {
