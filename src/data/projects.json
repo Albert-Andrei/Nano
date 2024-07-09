@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1proj",
+    "title": "Snapie",
+    "type": "Mobile App",
+    "date": "12.04.2023",
+    "image": "/images/projects/wk1.jpg",
+    "href": "projects/snapie"
+  },
+  {
+    "id": "2proj",
+    "title": "Scribbble",
+    "type": "Mobile App",
+    "date": "12.04.2023",
+    "image": "/images/projects/wk2.jpg",
+    "href": "projects/scribbble"
+  },
+  {
+    "id": "3proj",
+    "title": "AAM",
+    "type": "Website",
+    "date": "12.04.2023",
+    "image": "/images/projects/wk3.jpg",
+    "href": "projects/aam"
+  },
+  {
+    "id": "4proj",
+    "title": "Ellano",
+    "type": "Brand",
+    "date": "12.04.2023",
+    "image": "/images/projects/wk4.jpg",
+    "href": "projects/ellano"
+  }
+]

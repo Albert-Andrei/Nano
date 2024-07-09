@@ -11,6 +11,7 @@ import {
 } from "@components/accordion";
 import discounts from "@data/discounts-data.json";
 import Footer from "@components/footer";
+import Tag from "@components/tag";
 
 export default function Discount() {
   return (
@@ -19,9 +20,7 @@ export default function Discount() {
         {/* Header */}
         <section className="mt-[280px] max-md:mt-[240px]">
           {/* Tag */}
-          <div className="bg-tag rounded-full w-[fit-content]">
-            <p className="uppercase text-sm px-md py-1.5">new</p>
-          </div>
+          <Tag text="new" textStyle="uppercase" />
 
           <div className="flex items-end justify-between mt-4">
             {/* Title */}

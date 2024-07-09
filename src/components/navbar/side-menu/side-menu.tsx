@@ -8,7 +8,6 @@ import socials from "@data/socials.json";
 import Link from "next/link";
 import { useRouter, useSelectedLayoutSegments } from "next/navigation";
 import project1 from "../../../../public/images/projects/proj1.webp";
-
 interface SideBarProps {
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
@@ -20,6 +19,7 @@ const filtered_socials = socials.filter((s) => !idsToFilter.includes(s.id));
 export const SideBar: FC<SideBarProps> = ({ isOpen, setIsOpen }) => {
   const router = useRouter();
   const segments = useSelectedLayoutSegments();
+
   const pathname = segments?.[0];
 
   const [hovered, setHovered] = useState(false);
@@ -88,7 +88,7 @@ export const SideBar: FC<SideBarProps> = ({ isOpen, setIsOpen }) => {
                   >
                     <Link href={item.href} onClick={() => setIsOpen(false)}>
                       <p
-                        className={`text-5xl font-medium ${isOnPage && !hovered ? "text-white" : "text-faded"} hover:text-white transition-colors uppercase py-4`}
+                        className={`text-5xl font-medium ${isOnPage && !hovered ? "text-white" : "text-faded"} hover:text-white hover:scale-[1.1] transition-all uppercase py-4`}
                       >
                         {item.label}
                       </p>

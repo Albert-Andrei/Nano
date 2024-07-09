@@ -1,108 +1,74 @@
-import Image from "next/image";
+"use client";
+
+import { Fragment, useState } from "react";
+import Tag from "@components/tag";
 import Footer from "@components/footer";
-import team from "@data/team.json";
-import steps from "@data/application-steps.json";
+import Divider from "@components/divider";
+import projects from "@data/projects.json";
+import { PROJECT_FILTERS, ProjectFilters } from "@constants/constants";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Projects() {
+  const [selectedFilter, setSelectedFilter] = useState<ProjectFilters>(ProjectFilters.All);
+
   return (
     <>
       <main className="w-full bg-main">
         {/* Hero */}
-        <h1 className="mt-[240px] uppercase text-center text-[64px] max-sm:text-[48px] font-semibold">
-          Nano Team
+        <h1 className="mt-[240px] text-center text-[64px] max-sm:text-[48px] font-semibold">
+          Projects
         </h1>
 
-        {/* Hero Image */}
-        <Image
-          src="/images/team.webp"
-          alt="sale hero image"
-          width={3720}
-          height={2328}
-          priority
-          className="object-cover mt-[160px] max-sm:mt-[120px] max-sm:h-[500px]"
-        />
+        {/* Filter Bar */}
+        <div className="mt-[240px] px-[120px] max-xl:px-[60px] max-md:px-[16px]">
+          <div className="flex flex-row items-center justify-between">
+            <p className="uppercase text-2xl font-light">Case studies</p>
 
-        <section className="flex flex-row gap-[300px] max-xl:gap-[200px] max-lg:gap-[100px] max-md:gap-0   mt-[120px] max-sm:mt-[80px] px-[180px] max-xl:px-[60px] max-md:px-[16px]">
-          <p className="text-background text-2xl font-semibold max-sm:hidden">About</p>
+            <div className="flex flex-row gap-3">
+              {PROJECT_FILTERS.map((f) => {
+                const isActive = f.value === selectedFilter;
 
-          <div>
-            <p className="text-base font-light text-line">
-              Welcome to a realm where creativity meets professionalism, and love for what we do is
-              our second nature. Our team is not just a group of experts; we are craftsmen and
-              craftswomen, weaving our passion into every project.
-              <br />
-              <br />
-              We are a family of enthusiasts, crafting masterpieces with your project. Every pixel,
-              every line of code bears the mark of our passion, infused into each detail. We
-              don&apos;t just do our job; we create a work of art, filling it with soul and
-              inspiration.
-              <br />
-              <br />
-              Our aim is not merely to meet your expectations but to create something extraordinary.
-              For us, each project is a small miracle that we bring to life with enthusiasm and
-              professional mastery.
-              <br />
-              <br />
-              Trust us, and witness how your idea transforms into a magnificent work of art.
-              It&apos;s our calling, our passion, your dream personified!
-            </p>
-
-            {/* Team members */}
-            <div className="flex flex-wrap mt-[130px] max-sm:mt-[80px] gap-[40px]">
-              {team.map((item) => (
-                <div key={item.id} className="flex mr-[55px] max-xl:mr-0">
-                  <Image
-                    src={item.image}
-                    alt={item.name}
-                    width={80}
-                    height={80}
-                    className="object-cover w-[80px] h-[80px] rounded-full"
-                  />
-
-                  <div className="flex flex-col justify-center pl-6">
-                    <p className="text-lg">{item.name}</p>
-                    <p className="mt-[4px] text-line text-lg font-light">{item.title}</p>
-                  </div>
-                </div>
-              ))}
+                return (
+                  <button key={f.id} onClick={() => setSelectedFilter(f.value)}>
+                    <Tag
+                      text={f.label}
+                      containerStyle={`hover:scale-[1.1] ${isActive ? "bg-background" : ""}`}
+                      textStyle={`font-light text-base ${isActive ? "text-white" : ""}`}
+                    />
+                  </button>
+                );
+              })}
             </div>
           </div>
-        </section>
 
-        <section className="flex flex-col mt-[120px] max-sm:mt-[80px] px-[180px] max-xl:px-[60px] max-md:px-[16px]">
-          <p className="text-background text-2xl font-semibold uppercase">HOW WE WORK</p>
+          <Divider style="mt-[20px] mb-[32px] bg-light-line" />
 
-          <div
-            className="flex justify-between mt-[80px] mb-[130px] gap-[40px] max-xl:gap-[16px] overflow-x-scroll snap-x"
-            style={{ scrollbarWidth: "none" }}
-          >
-            {steps.map((item, index) => {
-              const isFirst = index === 0;
-              const isLast = index === steps.length - 1;
+          {projects.map((project) => (
+            <Fragment key={project.id}>
+              <Link
+                href={project.href}
+                className="flex flex-row justify-between items-center transition-all duration-500 hover:scale-[1.05]"
+              >
+                <p className="w-[22%] text-[56px] font-light">{project.title}</p>
+                <Tag text={project.type} textStyle="text-base font-light" />
+                <p className="text-base font-light">{project.date}</p>
 
-              return (
-                <div
-                  key={item.id}
-                  className={`h-[fit-content] max-sm:w-[80%] flex flex-col pl-4 border-l max-sm:shrink-0 max-sm:snap-start ${isLast ? "border-r pr-[40px] max-xl:pr-[16px]" : ""} ${isFirst ? "border-black" : ""}`}
-                >
-                  <p className="text-background whitespace-pre text-2xl font-light">{item.title}</p>
-                  <p className="mt-[40px] text-line text-base max-lg:text-sm font-light ">
-                    {item.content}
-                  </p>
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={280}
+                  height={170}
+                  className="object-cover rounded-[20px]"
+                />
+              </Link>
 
-                  {isFirst && (
-                    <Link href="/contact" className="mt-[50px]">
-                      <p className="pb-1 text-base max-lg:text-sm border-b border-black w-[fit-content] ">
-                        Submit you&apos;r project
-                      </p>
-                    </Link>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        </section>
+              <Divider style="my-[32px] bg-light-line" />
+            </Fragment>
+          ))}
+
+          <p className="mt-[80px] mb-[120px] text-center text-base font-light">More coming soon</p>
+        </div>
       </main>
       <Footer />
     </>
