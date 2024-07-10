@@ -27,7 +27,7 @@ export const Footer: FC = () => {
 
           <Link
             href="/contact"
-            className="w-[fit-content] mt-lg px-[32px] py-[14px] flex justify-center items-center rounded-full bg-white"
+            className="w-[fit-content] mt-lg px-[32px] py-[14px] flex justify-center items-center rounded-full bg-white transition-all duration-300 hover:scale-[1.1]"
           >
             <p className="text-base font-medium">Submit your project</p>
           </Link>
@@ -47,9 +47,10 @@ export const Footer: FC = () => {
             className={`absolute z-10 flex w-[300px] h-[370px] transition-all duration-700 rounded-3xl  ${isInView ? "-rotate-[15deg] max-md:-rotate-[10deg] -left-10 max-lg:-left-[10%] max-sm:-left-[40%] -top-[-40px] max-sm:-top-[-25px] max-sm:scale-[0.95]" : "-rotate-[0deg] -left-[0px] -top-[0px]"}`}
           />
 
+          {/* Discount card */}
           <div className="z-20 flex flex-col px-6 py-11 text-base rounded-3xl bg-main max-w-[327px]">
             <Image
-              src="svg/general/discount.svg"
+              src="/svg/general/discount.svg"
               alt="discount"
               loading="lazy"
               width={48}
@@ -81,7 +82,7 @@ export const Footer: FC = () => {
         </div>
       </div>
 
-      {/* References */}
+      {/* Socials */}
       <div className="mt-[150px] mb-lg">
         <div className="flex gap-lg max-md:hidden">
           {socials.map((social) => (
@@ -91,7 +92,9 @@ export const Footer: FC = () => {
               key={social.id}
               className="flex items-center justify-center"
             >
-              <p className="capitalize text-line">{social.label}</p>
+              <p className="capitalize text-line transition-all hover:text-white hover:scale-[1.1]">
+                {social.label}
+              </p>
             </Link>
           ))}
         </div>
@@ -102,10 +105,10 @@ export const Footer: FC = () => {
           <p className="text-line">© 2023 Nano Studio. All rights reserved.</p>
           <div className="flex gap-lg max-md:hidden">
             <Link href="/">
-              <p className="text-line">Privacy</p>
+              <p className="text-line transition-all hover:text-white hover:scale-[1.1]">Privacy</p>
             </Link>
             <Link href="/">
-              <p className="text-line">Terms</p>
+              <p className="text-line transition-all hover:text-white hover:scale-[1.1]">Terms</p>
             </Link>
           </div>
         </div>

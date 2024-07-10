@@ -2,33 +2,64 @@
   {
     "id": "1proj",
     "title": "Snapie",
-    "type": "Mobile App",
+    "slug": "snapie",
+    "type": "Product",
     "date": "12.04.2023",
-    "image": "/images/projects/wk1.jpg",
+    "image": "/images/projects/wk1.webp",
     "href": "projects/snapie"
   },
   {
     "id": "2proj",
-    "title": "Scribbble",
-    "type": "Mobile App",
+    "title": "Nathavy",
+    "slug": "nathavy",
+    "type": "Website",
     "date": "12.04.2023",
-    "image": "/images/projects/wk2.jpg",
-    "href": "projects/scribbble"
+    "image": "/images/projects/wk2.webp",
+    "href": "projects/nathavy"
   },
   {
     "id": "3proj",
-    "title": "AAM",
+    "title": "Sovereign Sky",
+    "slug": "sovereign-sky",
     "type": "Website",
     "date": "12.04.2023",
-    "image": "/images/projects/wk3.jpg",
-    "href": "projects/aam"
+    "image": "/images/projects/wk3.webp",
+    "href": "projects/sovereign-sky"
   },
   {
     "id": "4proj",
-    "title": "Ellano",
+    "title": "Ornate Key",
+    "slug": "ornate-key",
+    "type": "Website",
+    "date": "12.04.2023",
+    "image": "/images/projects/wk4.webp",
+    "href": "projects/ornate-key"
+  },
+  {
+    "id": "5proj",
+    "title": "FineLine",
+    "slug": "fine-line",
+    "type": "Product",
+    "date": "12.04.2023",
+    "image": "/images/projects/wk5.webp",
+    "href": "projects/fine-line"
+  },
+  {
+    "id": "6proj",
+    "title": "Vitality Peak",
+    "slug": "vitality-peak",
+    "type": "Website",
+    "date": "12.04.2023",
+    "image": "/images/projects/wk6.webp",
+    "href": "projects/vitality-peak"
+  },
+  {
+    "id": "7proj",
+    "title": "King’s of Strategy",
+    "slug": "kings-of-strategy",
     "type": "Brand",
     "date": "12.04.2023",
-    "image": "/images/projects/wk4.jpg",
-    "href": "projects/ellano"
+    "image": "/images/projects/wk7.webp",
+    "href": "projects/kings-of-strategy"
   }
 ]
