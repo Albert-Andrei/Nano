@@ -82,7 +82,7 @@ export const NavBar: FC = () => {
         </Link>
 
         <div className={`logo flex justify-between items-center ${invertBurger && "invert"}`}>
-          <Link href="/about" className="p-0 mr-lg max-sm:hidden">
+          <Link href="/contact" className="p-0 mr-lg max-sm:hidden">
             <p className="text-black underline underline-offset-8">Submit you&#39;r project</p>
           </Link>
 

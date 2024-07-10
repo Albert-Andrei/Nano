@@ -25,7 +25,7 @@ export const Footer: FC = () => {
             Let&apos;s collaborate
           </p>
 
-          <div className="button-container-1 mt-lg">
+          <div className="button-container-1 pulse mt-lg">
             <span className="mas">
               <p className="text-base font-medium">Submit your project</p>
             </span>
