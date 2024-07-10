@@ -25,12 +25,19 @@ export const Footer: FC = () => {
             Let&apos;s collaborate
           </p>
 
-          <Link
-            href="/contact"
-            className="w-[fit-content] mt-lg px-[32px] py-[14px] flex justify-center items-center rounded-full bg-white transition-all duration-300 hover:scale-[1.1]"
-          >
-            <p className="text-base font-medium">Submit your project</p>
-          </Link>
+          <div className="button-container-1 mt-lg">
+            <span className="mas">
+              <p className="text-base font-medium">Submit your project</p>
+            </span>
+            <Link
+              href="/contact"
+              id="work"
+              type="button"
+              className="w-[fit-content] px-[32px] py-[14px] flex justify-center items-center rounded-full bg-white transition-all duration-300 hover:scale-[1.1]"
+            >
+              <p className="text-base font-medium">Submit your project</p>
+            </Link>
+          </div>
         </div>
 
         {/* Cards */}
