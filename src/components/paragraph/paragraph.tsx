@@ -10,6 +10,6 @@ type ParagraphProps = {
 export const Paragraph: FC<ParagraphProps> = ({ title, text, titleStyle }) => (
   <>
     <p className={cn("text-base font-medium", titleStyle)}>{title}</p>
-    <p className="mt-md text-base text-line font-light">{text || "Unknown"}</p>
+    <p className="mt-md max-md:mt-4 text-base text-line font-light">{text || "Unknown"}</p>
   </>
 );

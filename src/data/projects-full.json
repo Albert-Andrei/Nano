@@ -8,6 +8,7 @@
     "image": "/images/projects/wk1.webp",
     "services": ["UI/UX", "Branding"],
     "client": "Nano Studio",
+    "next": "123",
     "content": [
       {
         "type": "text",

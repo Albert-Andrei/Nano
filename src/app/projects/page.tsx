@@ -48,7 +48,7 @@ export default function Projects() {
           {data.map((project) => (
             <Fragment key={project.id}>
               <Link
-                href={"projects/" + project.slug}
+                href={"/projects/" + project.slug}
                 className="relative flex flex-row max-md:flex-col-reverse justify-between items-center transition-all duration-500 hover:scale-[1.05]"
               >
                 <p className="md:hidden w-full max-md:mt-2 text-line text-base font-light">
