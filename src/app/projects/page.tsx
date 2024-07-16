@@ -1,12 +1,12 @@
 "use client";
 
 import { Fragment, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 import Tag from "@components/tag";
 import Footer from "@components/footer";
 import Divider from "@components/divider";
 import { PROJECT_FILTERS, ProjectFilters, SORTED_PROJECTS } from "@constants/constants";
-import Image from "next/image";
-import Link from "next/link";
 
 export default function Projects() {
   const [selectedFilter, setSelectedFilter] = useState<ProjectFilters>(ProjectFilters.All);
@@ -51,14 +51,14 @@ export default function Projects() {
                 href={"/projects/" + project.slug}
                 className="relative flex flex-row max-md:flex-col-reverse justify-between items-center transition-all duration-500 hover:scale-[1.05]"
               >
-                <p className="md:hidden w-full max-md:mt-2 text-line text-base font-light">
-                  {project.date}
+                <p className="md:hidden w-full max-md:mt-0 text-line text-base font-light">
+                  {project.description}
                 </p>
                 <p className="w-[30%] max-lg:w-[38%] max-md:w-full text-[56px] max-xl:text-[50px] max-lg:text-[45px] max-md:text-[32px] max-md:mt-4 font-light whitespace-nowrap overflow-hidden text-ellipsis">
                   {project.title}
                 </p>
                 <Tag
-                  text={project.type}
+                  text={project.type === "Mobile" ? "Mobile App" : project.type}
                   textStyle="text-base font-light max-md:text-xs max-md:px-2"
                   containerStyle="max-md:absolute max-md:top-3 max-md:left-3"
                 />

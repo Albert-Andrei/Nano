@@ -15,7 +15,9 @@ export default function Project({ params: { slug } }: { params: { slug: string }
     return null;
   }
 
-  const nextProjects = projects.filter((p) => p.slug === slug).slice(0, 4);
+  const nextProjects = projects
+    .filter((p) => p.slug !== slug && p.slug !== project.nextSlug)
+    .slice(0, 4);
 
   return (
     <>
@@ -127,7 +129,7 @@ export default function Project({ params: { slug } }: { params: { slug: string }
 
             <div className="flex-1 flex flex-row justify-between items-center max-md:justify-end">
               <Link
-                href={"/projects/" + project.next}
+                href={"/projects/" + project.nextSlug}
                 className="uppercase text-[42px] font-semibold"
               >
                 Next
@@ -137,7 +139,7 @@ export default function Project({ params: { slug } }: { params: { slug: string }
                 {nextProjects.map((p) => (
                   <Link
                     key={p.id + "link"}
-                    href={"/project/" + p.slug}
+                    href={"/projects/" + p.slug}
                     className="border-b-[0px] border-black transition-all duration-500 hover:border-b-[1px]"
                   >
                     <p className="capitalize">{p.title}</p>
@@ -148,6 +150,7 @@ export default function Project({ params: { slug } }: { params: { slug: string }
           </div>
         </section>
       </main>
+
       <Footer />
     </>
   );
