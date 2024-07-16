@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1proj",
+    "title": "Snapie",
+    "slug": "snapie",
+    "tags": ["Mobile App", "Brand"],
+    "date": "12.04.2023",
+    "image": "/images/projects/wk1.webp",
+    "services": ["UI/UX", "Branding"],
+    "client": "Nano Studio",
+    "content": [
+      {
+        "type": "text",
+        "sections": [
+          {
+            "title": "About",
+            "text": "Snapie is a dynamic platform that allows users to watch movie trailers and rate them. Our team is excited to introduce this innovative app, which features a dark, modern, and simple interface. One of Snapie’s standout features is its AI assistant, which accurately analyzes user preferences and helps recommend the perfect films."
+          },
+          {
+            "title": "Project Objective",
+            "text": "Our main goal was to develop an app that not only captivates users but also provides a seamless and enjoyable experience for discovering new movies. We aimed for Snapie to be the go-to app for movie enthusiasts looking for personalized recommendations and easy access to the latest trailers."
+          }
+        ]
+      },
+      {
+        "type": "media",
+        "images": ["/images/projects/wk1.webp", "/images/projects/wk1.webp"]
+      },
+      {
+        "type": "text",
+        "sections": [
+          {
+            "title": "Research and Analysis",
+            "text": "Before starting the design, we conducted thorough research on competitor apps and the needs of movie fans. We analyzed popular movie trailer apps to identify their strengths and weaknesses. Surveys and user interviews helped us understand what features and design elements users value most in a movie discovery app."
+          },
+          {
+            "title": "Design and Prototyping",
+            "text": "We focused on creating a dark and sleek interface that is both modern and easy to navigate. The design emphasizes simplicity, allowing users to effortlessly browse through trailers and rate them. We developed multiple prototypes and tested them with potential users to refine the design and ensure it met their expectations."
+          }
+        ]
+      },
+      {
+        "type": "media",
+        "images": ["/images/projects/wk1.webp"]
+      },
+      {
+        "type": "text",
+        "sections": [
+          {
+            "title": "Development",
+            "text": "During development, we utilized cutting-edge technologies and best practices to build a robust and responsive app. Key features include a vast library of movie trailers, an intuitive rating system, and a sophisticated AI assistant. The AI assistant analyzes user behavior and preferences to provide highly accurate and personalized movie recommendations."
+          },
+          {
+            "title": "Testing and Startup",
+            "text": "Before the official launch, we conducted extensive testing, including functionality tests, user experience evaluations, and performance assessments. We ensured the app worked smoothly on various devices and operating systems. A beta version was released to a select group of users for final feedback, enabling us to make any necessary improvements."
+          }
+        ]
+      },
+      {
+        "type": "media",
+        "images": ["/images/projects/wk1.webp", "/images/projects/wk1.webp"]
+      },
+      {
+        "type": "text",
+        "sections": [
+          {
+            "title": "Conclusion",
+            "text": "Developing the Snapie app was both a challenging and rewarding experience. The final product is a reflection of our commitment to quality and innovation. With its modern design and powerful AI assistant, Snapie offers an unparalleled movie discovery experience. We are confident that users will love the app’s convenience and personalized recommendations, making Snapie a top choice for movie trailer viewing and rating."
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,6 +1,6 @@
 import "@styles/globals.css";
 import type { Metadata } from "next";
-import { PoppinsFont } from "@fonts/fonts";
+import { PoppinsFont } from "@constants/fonts";
 import { DEFAULT_METADATA } from "@constants/metadata";
 import NavBar from "@components/navbar";
 

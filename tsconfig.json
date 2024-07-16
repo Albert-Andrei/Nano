@@ -25,7 +25,7 @@
       "@styles/*": ["./styles/*"],
       "@custom-types/*": ["./types/*"],
       "@public/*": ["../public/*"],
-      "@fonts/*": ["./fonts/*"],
+      "@utils/*": ["./utils/*"],
       "@hooks/*": ["./hooks/*"],
       "@data/*": ["./data/*"],
       "@constants/*": ["./constants/*"]
