@@ -16,7 +16,7 @@ export default function Projects() {
     <>
       <main className="w-full bg-main">
         {/* Hero */}
-        <h1 className="mt-[240px] text-center text-[64px] max-md:text-[48px] max-sm:text-[48px] font-semibold">
+        <h1 className="pt-[240px] text-center text-[64px] max-md:text-[48px] max-sm:text-[48px] font-semibold">
           Projects
         </h1>
 
@@ -77,7 +77,7 @@ export default function Projects() {
             </Fragment>
           ))}
 
-          <p className="mt-[80px] max-md:mt-[30px] mb-[120px] text-center text-base font-light">
+          <p className="mt-[80px] max-md:mt-[30px] pb-[120px] text-center text-base font-light">
             More coming soon
           </p>
         </div>

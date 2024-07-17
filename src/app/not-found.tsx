@@ -12,7 +12,7 @@ export default function NotFound() {
   }, []);
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center text-center font-sans">
+    <main className="h-screen flex flex-col items-center justify-center text-center font-sans">
       <div className="flex items-center">
         <h1 className="next-error-h1 text-white inline-block m-0 mr-5 p-0 pr-6 text-2xl font-medium leading-[49px]">
           404
@@ -23,6 +23,6 @@ export default function NotFound() {
           </h2>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

@@ -1,15 +1,14 @@
 import Image from "next/image";
 import Footer from "@components/footer";
 import team from "@data/team.json";
-import steps from "@data/application-steps.json";
-import Link from "next/link";
+import HowWeWork from "@components/how-we-work";
 
 export default function About() {
   return (
     <>
       <main className="w-full bg-main">
         {/* Hero */}
-        <h1 className="mt-[240px] uppercase text-center text-[64px] max-sm:text-[48px] font-semibold">
+        <h1 className="pt-[240px] uppercase text-center text-[64px] max-sm:text-[48px] font-semibold">
           Nano Team
         </h1>
 
@@ -73,35 +72,7 @@ export default function About() {
         <section className="flex flex-col mt-[120px] max-sm:mt-[80px] px-[180px] max-xl:px-[60px] max-md:px-[16px]">
           <p className="text-background text-2xl font-semibold uppercase">HOW WE WORK</p>
 
-          <div
-            className="flex justify-between mt-[80px] mb-[130px] gap-[40px] max-xl:gap-[16px] overflow-x-scroll snap-x"
-            style={{ scrollbarWidth: "none" }}
-          >
-            {steps.map((item, index) => {
-              const isFirst = index === 0;
-              const isLast = index === steps.length - 1;
-
-              return (
-                <div
-                  key={item.id}
-                  className={`h-[fit-content] max-sm:w-[80%] flex flex-col pl-4 border-l max-sm:shrink-0 max-sm:snap-start ${isLast ? "border-r pr-[40px] max-xl:pr-[16px]" : ""} ${isFirst ? "border-black" : ""}`}
-                >
-                  <p className="text-background whitespace-pre text-2xl font-light">{item.title}</p>
-                  <p className="mt-[40px] text-line text-base max-lg:text-sm font-light ">
-                    {item.content}
-                  </p>
-
-                  {isFirst && (
-                    <Link href="/contact" className="mt-[50px]">
-                      <p className="pb-1 text-base max-lg:text-sm border-b border-black w-[fit-content] ">
-                        Submit you&apos;r project
-                      </p>
-                    </Link>
-                  )}
-                </div>
-              );
-            })}
-          </div>
+          <HowWeWork />
         </section>
       </main>
       <Footer />

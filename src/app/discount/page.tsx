@@ -18,7 +18,7 @@ export default function Discount() {
     <>
       <main className="w-full bg-main px-[180px] max-xl:px-[60px] max-md:px-[16px]">
         {/* Header */}
-        <section className="mt-[280px] max-md:mt-[240px]">
+        <section className="pt-[280px] max-md:pt-[240px]">
           {/* Tag */}
           <Tag text="new" textStyle="uppercase" />
 
@@ -64,7 +64,7 @@ export default function Discount() {
         />
 
         {/* Content */}
-        <section className="mt-[120px] max-md:mt-[80px] flex mb-[240px] max-md:flex-col">
+        <section className="mt-[120px] max-md:mt-[80px] flex pb-[240px] max-md:flex-col">
           {/* Info */}
           <div className="w-[50%] max-md:w-[100%] pr-[130px] max-md:pr-[0px]">
             <p className="font-semibold text-2xl max-sm:text-xl">Get discount</p>

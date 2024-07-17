@@ -9,6 +9,9 @@ import Image from "next/image";
 import madama from "@public/images/team/madam.webp";
 import petro from "@public/images/team/petrucio.webp";
 
+const basicLinkStyle =
+  "capitalize text-line border-b-[1.5px] border-transparent transition-all duration-500 hover:text-white hover:scale-[1.1] hover:border-white";
+
 export const Footer: FC = () => {
   const { ref, isInView } = useInView();
 
@@ -99,9 +102,7 @@ export const Footer: FC = () => {
               key={social.id}
               className="flex items-center justify-center"
             >
-              <p className="capitalize text-line transition-all hover:text-white hover:scale-[1.1]">
-                {social.label}
-              </p>
+              <p className={basicLinkStyle}>{social.label}</p>
             </Link>
           ))}
         </div>
@@ -112,10 +113,10 @@ export const Footer: FC = () => {
           <p className="text-line">© 2023 Nano Studio. All rights reserved.</p>
           <div className="flex gap-lg max-md:hidden">
             <Link href="/">
-              <p className="text-line transition-all hover:text-white hover:scale-[1.1]">Privacy</p>
+              <p className={basicLinkStyle}>Privacy</p>
             </Link>
             <Link href="/">
-              <p className="text-line transition-all hover:text-white hover:scale-[1.1]">Terms</p>
+              <p className={basicLinkStyle}>Terms</p>
             </Link>
           </div>
         </div>

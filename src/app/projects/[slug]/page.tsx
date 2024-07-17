@@ -24,7 +24,7 @@ export default function Project({ params: { slug } }: { params: { slug: string }
       <main className="w-full bg-main">
         {/* Header */}
         <section className="px-[180px] max-xl:px-[60px] max-md:px-[16px]">
-          <div className="w-full mt-[320px] max-md:mt-[240px] flex flex-row max-md:flex-col-reverse items-center max-md:items-start gap-[120px] max-xl:gap-[60px] max-md:gap-[32px]">
+          <div className="w-full pt-[320px] max-md:pt-[240px] flex flex-row max-md:flex-col-reverse items-center max-md:items-start gap-[120px] max-xl:gap-[60px] max-md:gap-[32px]">
             {/* @TODO: check gaps and title width*/}
             <h1 className="text-[64px] font-light">{project?.title}</h1>
 
@@ -121,7 +121,7 @@ export default function Project({ params: { slug } }: { params: { slug: string }
           </div>
         </section>
 
-        <section className="mb-[120px] max-md:mb-[80px] px-[180px] max-xl:px-[60px] max-md:px-[16px]">
+        <section className="pb-[120px] max-md:pb-[80px] px-[180px] max-xl:px-[60px] max-md:px-[16px]">
           <Divider style="mt-[80px] max-md:mb-[24px]" />
 
           <div className="flex flex-row items-center gap-[160px]">
@@ -140,7 +140,7 @@ export default function Project({ params: { slug } }: { params: { slug: string }
                   <Link
                     key={p.id + "link"}
                     href={"/projects/" + p.slug}
-                    className="border-b-[0px] border-black transition-all duration-500 hover:border-b-[1px]"
+                    className="border-b-[1.5px] border-transparent transition-all duration-500 hover:border-black hover:scale-[1.1] "
                   >
                     <p className="capitalize">{p.title}</p>
                   </Link>
