@@ -40,7 +40,7 @@ export const SideBar: FC<SideBarProps> = ({ isOpen, setIsOpen }) => {
   return (
     <>
       <button
-        className={`z-50 absolute top-10 left-20 max-xl:left-[60px] max-md:left-[16px] transition-all delay-250 duration-500 ${isOpen ? "opacity-100" : "opacity-0"}`}
+        className={`z-[150] absolute top-10 left-20 max-xl:left-[60px] max-md:left-[16px] transition-all delay-250 duration-500 ${isOpen ? "opacity-100" : "opacity-0"}`}
         onClick={onLogoPressed}
       >
         <div className="logo flex invert">
@@ -53,7 +53,7 @@ export const SideBar: FC<SideBarProps> = ({ isOpen, setIsOpen }) => {
       {/* Menu */}
       <div
         id="drawer-navigation"
-        className="fixed top-0 right-0 z-40 w-[50%] max-sm:w-full h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-black ease-out duration-500 flex items-center justify-center max-md:justify-start"
+        className="z-[140] fixed top-0 right-0 w-[50%] max-sm:w-full h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-black ease-out duration-500 flex items-center justify-center max-md:justify-start"
         tabIndex={-1}
         aria-labelledby="drawer-navigation-label"
         style={{ transform: isOpen ? "translateX(0)" : "" }}
