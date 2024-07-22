@@ -13,7 +13,7 @@ interface SideBarProps {
   setIsOpen: (isOpen: boolean) => void;
 }
 
-const idsToFilter = [1, 3];
+const idsToFilter = [3];
 const filtered_socials = socials.filter((s) => !idsToFilter.includes(s.id));
 
 export const SideBar: FC<SideBarProps> = ({ isOpen, setIsOpen }) => {
@@ -100,12 +100,22 @@ export const SideBar: FC<SideBarProps> = ({ isOpen, setIsOpen }) => {
           </nav>
 
           <p className="text-faded text-base font-medium pt-[42px] pb-4">Social</p>
-          <div className="flex items-start gap-[24px]">
+          <div id="menu-socials" className="flex items-start gap-[24px] max-md:gap-[12px]">
             {filtered_socials.map((social) => (
               <Link key={social.id + social.label} href={social.link} target="_blank">
-                <p className="capitalize text-faded text-base hover:text-white transition-all">
+                <p className="capitalize text-faded text-base hover:text-white transition-all max-md:hidden">
                   {social.label}
                 </p>
+
+                <div className="md:hidden w-[48px] h-[48px] flex items-center justify-center rounded-full border-faded border-[1px]">
+                  <Image
+                    src={social.icon}
+                    alt={social.label}
+                    width={social.size}
+                    height={social.size}
+                    className="invert"
+                  />
+                </div>
               </Link>
             ))}
           </div>

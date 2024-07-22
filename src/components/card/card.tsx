@@ -49,7 +49,7 @@ export const Card: FC<CardProps> = ({
         height={500}
         priority={config.priority}
         quality={config.quality}
-        className="object-cover rounded-[20px] w-[260px] h-[325px]"
+        className="object-cover rounded-[20px] max-md:w-[260px] max-md:h-[325px]"
       />
 
       <div className="z-10 absolute bottom-6 max-md:bottom-4 left-6 max-md:left-4 right-6 max-md:right-4 flex justify-between">

@@ -10,7 +10,7 @@ import madama from "@public/images/team/madam.webp";
 import petro from "@public/images/team/petrucio.webp";
 
 const basicLinkStyle =
-  "capitalize text-line border-b-[1.5px] border-transparent transition-all duration-500 hover:text-white hover:scale-[1.1] hover:border-white";
+  "max-md:hidden capitalize text-line border-b-[1.5px] border-transparent transition-all duration-500 hover:text-white hover:scale-[1.1] hover:border-white";
 
 export const Footer: FC = () => {
   const { ref, isInView } = useInView();
@@ -93,8 +93,11 @@ export const Footer: FC = () => {
       </div>
 
       {/* Socials */}
-      <div className="mt-[150px] mb-lg">
-        <div className="flex gap-lg max-md:hidden">
+      <div className="mt-[150px] max-md:mt-[80px] mb-lg">
+        <div
+          id="footer-socials"
+          className="flex gap-lg max-md:gap-[12px] max-md:justify-center max-md:mb-[40px]"
+        >
           {socials.map((social) => (
             <Link
               href={social.link}
@@ -103,6 +106,16 @@ export const Footer: FC = () => {
               className="flex items-center justify-center"
             >
               <p className={basicLinkStyle}>{social.label}</p>
+
+              <div className="md:hidden w-[48px] h-[48px] flex items-center justify-center rounded-full border-faded border-[1px]">
+                <Image
+                  src={social.icon}
+                  alt={social.label}
+                  width={social.size}
+                  height={social.size}
+                  className="invert"
+                />
+              </div>
             </Link>
           ))}
         </div>
