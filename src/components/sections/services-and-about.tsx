@@ -14,8 +14,8 @@ import services from "@data/studio-services.json";
 
 export const ServicesAndAbout = () => {
   return (
-    <Parallax speed={20}>
-      <section className="bg-white w-full mt-[-140px] pt-[120px] px-[180px] max-xl:px-[60px] max-md:px-[16px]">
+    <Parallax speed={20} easing={"easeOutQuad"}>
+      <section className="z-[20] bg-white w-full mt-[-100px] pt-[120px] px-[180px] max-xl:px-[60px] max-md:px-[16px]">
         <p className="text-base font-light uppercase">Services</p>
 
         <div className="mt-[42px] max-md:mt-[32px] flex flex-row max-md:flex-col justify-between gap-[180px] max-xl:gap-[130px] max-lg:gap-[100px] max-md:gap-[80px]">

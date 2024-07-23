@@ -5,8 +5,6 @@ import Card from "@components/card";
 import reviews from "@data/reviews.json";
 import { useState } from "react";
 
-// const disabledButtonStyle =
-
 export const Reviews = () => {
   const [activeReview, setActiveReview] = useState(0);
 
@@ -41,6 +39,8 @@ export const Reviews = () => {
                 type={review.author.title}
                 progress={review.author.company}
                 image={review.author.image}
+                tagStyle="bg-white"
+                tagTextStyle="text-black"
               />
             </div>
 

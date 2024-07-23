@@ -37,7 +37,7 @@ export const Card: FC<CardProps> = ({
 }) => {
   return (
     <div className="relative shrink-0">
-      <div className="z-10 absolute top-6 max-md:top-4 left-6 max-md:left-4 ">
+      <div className="absolute top-6 max-md:top-4 left-6 max-md:left-4 ">
         <p className={cn("uppercase text-white text-[24px] font-medium", titleStyle)}>{title}</p>
         <p className={cn("lowercase text-white text-[12px] font-light", subtitleStyle)}>{type}</p>
       </div>
@@ -52,7 +52,7 @@ export const Card: FC<CardProps> = ({
         className="object-cover rounded-[20px] max-md:w-[260px] max-md:h-[325px]"
       />
 
-      <div className="z-10 absolute bottom-6 max-md:bottom-4 left-6 max-md:left-4 right-6 max-md:right-4 flex justify-between">
+      <div className="absolute bottom-6 max-md:bottom-4 left-6 max-md:left-4 right-6 max-md:right-4 flex justify-between">
         <Tag
           text={progress}
           textStyle={cn(
