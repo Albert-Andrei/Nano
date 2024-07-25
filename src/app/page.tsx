@@ -8,7 +8,7 @@ export default function Home() {
     <div id="fixed-image">
       <main className="bg-background">
         {/* Hero */}
-        <section className="w-full flex flex-col items-center">
+        <section id="hero" className="dark-bg w-full flex flex-col items-center">
           {/* Title */}
           <h1 className="mt-[300px] max-md:mt-[280px] uppercase text-white text-center text-[96px] max-md:text-[48px] font-semibold tracking-[-4px]">
             Nano <span className="font-[200]">Studio</span>

@@ -8,7 +8,10 @@ export default function Contact() {
     <>
       <main className="w-full relative flex flex-row max-lg:flex-col justify-end bg-main">
         {/* image */}
-        <section className="dark-bg fixed max-lg:relative w-[50%] max-xl:w-[45%] max-lg:w-[100%] h-screen max-lg:h-[360px] top-0 left-0 self-start">
+        <section
+          id="image"
+          className="dark-bg fixed max-lg:relative w-[50%] max-xl:w-[45%] max-lg:w-[100%] h-screen max-lg:h-[360px] top-0 left-0 self-start"
+        >
           <Image
             src="/images/thinker.webp"
             alt="side image"
@@ -32,7 +35,10 @@ export default function Contact() {
         </section>
 
         {/* Content */}
-        <section className="light-bg w-[50%] max-xl:w-[55%] max-lg:w-[100%] bg-main pt-[240px] max-lg:pt-[80px] px-[60px] max-lg:px-[60px] max-sm:px-[16px]">
+        <section
+          id="contact-form"
+          className="w-[50%] max-xl:w-[55%] max-lg:w-[100%] bg-main pt-[240px] max-lg:pt-[80px] px-[60px] max-lg:px-[60px] max-sm:px-[16px]"
+        >
           <ContactForm />
         </section>
       </main>

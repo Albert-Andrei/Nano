@@ -15,7 +15,10 @@ import services from "@data/studio-services.json";
 export const ServicesAndAbout = () => {
   return (
     <Parallax speed={20} easing={"easeOutQuad"}>
-      <section className="z-[20] bg-white w-full mt-[-100px] pt-[120px] px-[180px] max-xl:px-[60px] max-md:px-[16px]">
+      <section
+        id="services"
+        className="z-[20] bg-white w-full mt-[-100px] pt-[120px] px-[180px] max-xl:px-[60px] max-md:px-[16px]"
+      >
         <p className="text-base font-light uppercase">Services</p>
 
         <div className="mt-[42px] max-md:mt-[32px] flex flex-row max-md:flex-col justify-between gap-[180px] max-xl:gap-[130px] max-lg:gap-[100px] max-md:gap-[80px]">
@@ -54,7 +57,10 @@ export const ServicesAndAbout = () => {
         </div>
       </section>
 
-      <section className="max-md:hidden bg-white w-full flex flex-col pt-[120px] pb-[60px] px-[180px] max-xl:px-[60px] max-md:px-[16px]">
+      <section
+        id="how-it-works"
+        className="max-md:hidden bg-white w-full flex flex-col pt-[120px] pb-[60px] px-[180px] max-xl:px-[60px] max-md:px-[16px]"
+      >
         <p className="text-background text-base font-light  uppercase">HOW WE WORK</p>
         <p className="mt-[42px] text-background font-semibold">From Research to Success</p>
 
@@ -62,7 +68,7 @@ export const ServicesAndAbout = () => {
       </section>
 
       {/* MOBILE:  About  */}
-      <section className="md:hidden pt-[120px] pb-[120px] bg-white">
+      <section id="about" className="md:hidden pt-[120px] pb-[120px] bg-white">
         <div className=" max-md:px-[16px]">
           <p className="text-background text-base font-light  uppercase">ABOUT</p>
           <p className="mt-[32px] text-background font-semibold">What the ai says about us</p>
